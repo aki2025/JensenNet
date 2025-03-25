@@ -165,23 +165,29 @@ Running the Entire Project (main.py)
 ### Deployment Methods in Real-Time Production
 
  ## Edge Device Deployments
-Setup Hardware: Use an edge device (e.g., NVIDIA Jetson Nano) with Python and TensorFlow Lite installed.
-Transfer Files: Copy the project directory, including trained TFLite models, scaler.pkl, and threshold.txt.
-Install Dependencies:
+**Setup Hardware:** Use an edge device (e.g., NVIDIA Jetson Nano) with Python and TensorFlow Lite installed.
+
+**Transfer Files:** Copy the project directory, including trained TFLite models, scaler.pkl, and threshold.txt.
+
+**Install Dependencies:**
 pip install -r requirements.txt
-Run the Application:
+
+**Run the Application:**
 python main.py
-Monitoring: Configure logging to a file or remote server for real-time performance tracking.
+
+**Monitoring: **Configure logging to a file or remote server for real-time performance tracking.
 
  ## Cloud-Augmented Deployment
-Hybrid Approach: Run lightweight inference on edge devices and offload heavy training or analytics to the cloud.
-Steps:
+**Hybrid Approach:** Run lightweight inference on edge devices and offload heavy training or analytics to the cloud.
+
+**Steps:**
+
 Deploy edge components as above.
 Set up a cloud server (e.g., AWS EC2) to periodically retrain models with new data.
 Use a message queue (e.g., MQTT) to sync edge devices with cloud updates.
 
 
- ## Scaling with Containers
+## Scaling with Containers
 
 **Dockerize**:
 Create a Dockerfile:
@@ -193,7 +199,7 @@ COPY . /app
 RUN pip install -r requirements.txt
 CMD ["python", "main.py"]
 
-Build and run:
+**Build and run:**
 
 docker build -t 5g-optimization .
 docker run -d 5g-optimization
@@ -201,8 +207,10 @@ docker run -d 5g-optimization
 **Orchestration**: Use Kubernetes to manage multiple edge containers, ensuring high availability and load balancing.
 
 ### References
+
 NVIDIA Aerial SDK Official Documentation: NVIDIA Aerial SDK - Provides tools for 5G network simulation and optimization.
-Developer Guide: Explore baseband processing and radio resource management.
+
+**Developer Guide:** Explore baseband processing and radio resource management.
 
 ### Study Resources
 1. TensorFlow Lite: TensorFlow Lite Guide - Learn model optimization for edge deployment.
